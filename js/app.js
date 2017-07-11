@@ -40,6 +40,8 @@ $("#results").on('click', '.generatedButton', function(){
   var generatedId = $(this).attr('value');
   console.log(generatedId);
   $('#userUrl').val('https://www.youtube.com/watch?v=' + generatedId);
+  $.scrollTo($('#userUrl'), 500);
+
 });
 /*function compileGeneratedLink(thing){
   console.log('itsamee');
