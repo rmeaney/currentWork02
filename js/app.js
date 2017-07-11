@@ -20,6 +20,7 @@ $(function() {
           $.each(results.items, function(index, item) {
             $.get("tpl/item.html", function(data) {
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
+                $("#results").append('<br/>hello I was added!');
             });
           });
           resetVideoHeight();
