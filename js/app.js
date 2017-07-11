@@ -17,9 +17,9 @@ $(function() {
        request.execute(function(response) {
           var results = response.result;
           $("#results").html("");
-          $('#results').append('poop');
-          $.each(results.items, function(index, item) {
 
+          $.each(results.items, function(index, item) {
+             $('#results').append('<tr><td>hello</td><td></td></tr>');
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
