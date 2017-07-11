@@ -36,7 +36,7 @@ function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9/16);
 }
 $("#results").on('click', '.generatedButton', function(){
-  console.log('you clicked me dog!'+item.id.videoId)
+  console.log($(this).value());
 });
 function compileGeneratedLink(thing){
   console.log('itsamee');
