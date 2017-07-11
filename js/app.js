@@ -17,6 +17,7 @@ $(function() {
        request.execute(function(response) {
           var results = response.result;
           $("#results").html("");
+          $('#results').append('poop');
           $.each(results.items, function(index, item) {
 
             $.get("tpl/item.html", function(data) {
