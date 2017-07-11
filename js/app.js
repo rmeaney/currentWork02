@@ -21,7 +21,7 @@ $(function() {
             $.get("tpl/item.html", function(data) {
               console.log(data);
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-                $("#results").append(results.videoId);
+                $("#results").append('test');
             });
           });
           resetVideoHeight();
