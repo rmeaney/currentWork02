@@ -38,7 +38,7 @@ $(document).ready(function(){
         b = a.split("&")[0];
         finalLink = 'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3';
         $('#outputLink').append(finalLink+'<br/>');
-        $('#courtesyLink').append("<a href = " + finalLink + '>' + " </a>");
+        $('#courtesyLink').append("<a href = " + finalLink + '>' + "Click Here</a>");
 
         $('#userHoursInputStart').val('0');
         $('#userMinutesInputStart').val('0');
