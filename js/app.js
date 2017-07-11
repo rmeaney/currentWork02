@@ -36,12 +36,13 @@ function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9/16);
 }
 $("#results").on('click', '.generatedButton', function(){
-  var money = $(this).attr('value');
-  console.log(money);
+  var generatedId = $(this).attr('value');
+  console.log(generatedId);
+  $('#userUrl').value('https://www.youtube.com/watch?v=' + generatedId);
 });
-function compileGeneratedLink(thing){
+/*function compileGeneratedLink(thing){
   console.log('itsamee');
-}
+}*/
 
 function init() {
     // key youtube api v3 
