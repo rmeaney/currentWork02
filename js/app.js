@@ -36,11 +36,13 @@ $(function() {
 function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9/16);
 }
+
+//button click
 $("#results").on('click', '.generatedButton', function(){
   var generatedId = $(this).attr('value');
   console.log(generatedId);
   $('#userUrl').val('https://www.youtube.com/watch?v=' + generatedId);
-
+  $('#urlAnchor').text('Your video is selected, Set your start and end times')
 });
 /*function compileGeneratedLink(thing){
   console.log('itsamee');
