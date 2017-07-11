@@ -1,3 +1,4 @@
+console.log('Im over here!');
 function tplawesome(event,t){res=event;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(event,r){return t[n][r]})}return res}
 
 $(function() {
