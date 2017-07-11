@@ -37,7 +37,7 @@ $(document).ready(function(){
         a = a != undefined ? a : url.split("youtu.be/")[1];
         b = a.split("&")[0];
         $('#outputLink').append('https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+'<br/>');
-        $('#courtesyLink').append("<a href ="'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+'Click Here</a>')
+        $('#courtesyLink').append("<a href ="'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+'Click Here'+ "</a>");
 
         $('#userHoursInputStart').val('0');
         $('#userMinutesInputStart').val('0');
