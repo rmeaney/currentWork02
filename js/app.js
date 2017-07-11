@@ -38,7 +38,7 @@ function resetVideoHeight() {
 $("#results").on('click', '.generatedButton', function(){
   var generatedId = $(this).attr('value');
   console.log(generatedId);
-  $('#userUrl').value('https://www.youtube.com/watch?v=' + generatedId);
+  $('#userUrl').val('https://www.youtube.com/watch?v=' + generatedId);
 });
 /*function compileGeneratedLink(thing){
   console.log('itsamee');
