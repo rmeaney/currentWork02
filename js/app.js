@@ -22,7 +22,9 @@ $(function() {
               var thisURL = $(this).attr('src')
               console.log(data);
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-                $("#results").append('<p>'+item.id.videoId+'</p>');
+                $("#results").append('<button id ='+item.id.videoId+'>"Use this Video"</button>');
+                var grabbedID = item.id.videoId;
+                compileGeneratedLink(grabbedID);
             });
           });
           resetVideoHeight();
@@ -34,6 +36,9 @@ $(function() {
 
 function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9/16);
+}
+function compileGeneratedLink(thing){
+  console.log('itsamee');
 }
 
 function init() {
