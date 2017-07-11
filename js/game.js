@@ -36,7 +36,7 @@ $(document).ready(function(){
 
         a = a != undefined ? a : url.split("youtu.be/")[1];
         b = a.split("&")[0];
-        final link = 'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3';
+        finalLink = 'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3';
         $('#outputLink').append(finalLink+'<br/>');
         $('#courtesyLink').append("<a href = " + finalLink + '>' + " </a>");
 
