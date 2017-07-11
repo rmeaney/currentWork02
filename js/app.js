@@ -18,14 +18,13 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $("#results").append('<table><tr><td>'+item.snippet.title'</td><td>'+"https://img.youtube.com/vi/"+item.id.videoId+'2</td>');
+            
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
                 $("#results").append('<button id ='+item.id.videoId +" "+'class ='+' generatedButton' + ' ' + 'value = ' + item.id.videoId + '>Use this Video</button>');
             });
-            $("#results").append('</tr><table>');
           });
           resetVideoHeight();
        });
