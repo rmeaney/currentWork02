@@ -18,7 +18,7 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            $("#results").append('<table><tr><td>'+item.snippet.title'</td><td>'+"https://img.youtube.com/vi/"+item.id.videoId+'2</td>')
+            $("#results").append('<table><tr><td>'+item.snippet.title'</td><td>'+"https://img.youtube.com/vi/"+item.id.videoId+'2</td>');
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
