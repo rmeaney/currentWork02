@@ -9,7 +9,7 @@ $(function() {
             part: "snippet",
             type: "video",
             q: encodeURIComponent($("#search").val()).replace(/%20/g, "+"),
-            maxResults: 3,
+            maxResults: 10,
             order: "relevance",
             publishedAfter: "2015-01-01T00:00:00Z"
        }); 
@@ -18,7 +18,7 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            
+
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
