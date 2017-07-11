@@ -19,7 +19,7 @@ $(function() {
           $("#results").html("");
 
           $.each(results.items, function(index, item) {
-             $('#results').append('<tr><td>hello</td><td></td></tr>');
+             $('#results').append('<tr><th>'+item.snippet.title+'</th>load Video<th><img src ="https://img.youtube.com/vi/"'+item.id.video'<th></th></th></tr>');
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
