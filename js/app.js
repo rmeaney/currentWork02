@@ -18,7 +18,7 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
-            
+
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
