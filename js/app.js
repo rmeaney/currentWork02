@@ -36,7 +36,7 @@ function resetVideoHeight() {
     $(".video").css("height", $("#results").width() * 9/16);
 }
 $("#results").on('click', '.generatedButton', function(){
-  var money = $(this).value();
+  var money = $(this).attr('value');
   console.log(money);
 });
 function compileGeneratedLink(thing){
