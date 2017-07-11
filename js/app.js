@@ -23,7 +23,7 @@ $(function() {
               var thisURL = $(this).attr('src')
               console.log(data);
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-                $("#results").append('<button id ='+item.id.videoId +" "+'class ='+' generatedButton' + ' ' + 'value = ' + item.id.videoId + '>Use this Video</button>');
+                $("#results").append('<a href = "#userUrl"><button id ='+item.id.videoId +" "+'class ='+' generatedButton' + ' ' + 'value = ' + item.id.videoId + '>Use this Video</button></a>');
             });
           });
           resetVideoHeight();
@@ -40,7 +40,6 @@ $("#results").on('click', '.generatedButton', function(){
   var generatedId = $(this).attr('value');
   console.log(generatedId);
   $('#userUrl').val('https://www.youtube.com/watch?v=' + generatedId);
-  $(document).scrollTo($('#userUrl'), 500);
 
 });
 /*function compileGeneratedLink(thing){
