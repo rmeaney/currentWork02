@@ -1,4 +1,4 @@
-console.log('Im over here!');
+
 function tplawesome(event,t){res=event;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(event,r){return t[n][r]})}return res}
 
 $(function() {
@@ -18,6 +18,7 @@ $(function() {
           var results = response.result;
           $("#results").html("");
           $.each(results.items, function(index, item) {
+            $("#results").append('<table><tr><td>'+item.snippet.title'</td><td>'+"https://img.youtube.com/vi/"+item.id.videoId+'2</td>')
             $.get("tpl/item.html", function(data) {
               var thisURL = $(this).attr('src')
               console.log(data);
