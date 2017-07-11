@@ -13,6 +13,7 @@ $(document).ready(function(){
     $('#submitBTN').on('click', function(event){
         event.preventDefault();
         $('#outputLink').html('');
+        $('#courtesyLink').html('');
         var url = $('#userUrl').val().trim();
          //http://www.youtube.com/watch?v=SNfYz6Yw0W8&feature=g-all-esi would work also
         var a = url.split("v=")[1];
@@ -36,9 +37,8 @@ $(document).ready(function(){
         a = a != undefined ? a : url.split("youtu.be/")[1];
         b = a.split("&")[0];
         $('#outputLink').append('https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+'<br/>');
+        $('#courtesyLink').append("<a href ="'https://www.youtube.com/embed/' + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+'Click Here</a>')
 
-        $('#outputLink').append("<div id ='myLink'>"+ "a href =" + "https://www.youtube.com/embed/" + a + '?start=' + userStartTime +'&end='+userEndTime+'&version=3'+ '>Click Here</a>'+"</div>" );
-        $('#userUrl').val('');
         $('#userHoursInputStart').val('0');
         $('#userMinutesInputStart').val('0');
         $('#userSecondsInputStart').val('0');
