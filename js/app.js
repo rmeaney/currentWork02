@@ -19,9 +19,10 @@ $(function() {
           $("#results").html("");
           $.each(results.items, function(index, item) {
             $.get("tpl/item.html", function(data) {
+              var thisURL = $(this).attr('src')
               console.log(data);
                 $("#results").append(tplawesome(data, [{"title":item.snippet.title, "videoid":item.id.videoId}]));
-                $("#results").append('test');
+                $("#results").append(thisURL);
             });
           });
           resetVideoHeight();
